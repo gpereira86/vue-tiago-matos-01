@@ -1,3 +1,12 @@
+# Relembrando Vue.js
+
+### Montando um Todo List: [Link para os vídeos](https://www.youtube.com/playlist?list=PLcoYAcR89n-qTYqfWTGxXMnAvCqY3JF8w)
+
+
+- **_Montando um sistema de registros de tarefas com flag de realizados._** 
+
+---
+
 # app
 
 ## Project setup
