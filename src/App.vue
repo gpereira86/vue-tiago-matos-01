@@ -1,8 +1,8 @@
 <template>
   <div>
 
-    <div v-for="obj in todos" v-bind:key="obj.id" class="todos-item">
-      {{ obj.title }}
+    <div v-for="(obj, index) in todos" v-bind:key="obj.id" class="todos-item">
+      {{index}} - {{ obj.title }}
     </div>
 
   </div>
