@@ -1,6 +1,7 @@
 <template>
   <div>
 
+<!--    https://www.youtube.com/watch?v=oCxEXfsld-o&list=PLcoYAcR89n-qTYqfWTGxXMnAvCqY3JF8w&index=7-->
     <!-- Pode-se suprimir v-bind usando somente ':' -->
 <!--    <img :src="imgSrc" v-bind:alt="imgAlt"> -->
 
