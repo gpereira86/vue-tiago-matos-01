@@ -1,5 +1,16 @@
 <template>
-  <TheHeader></TheHeader>
+<!--  <TheHeader v-show="showHeader"/> &lt;!&ndash; Quando desabilitado, aparece no HTML, mas com display: none &ndash;&gt;-->
+  <TheHeader v-if="showHeader"/> <!-- Quando desabilitado, >>NÃO<< aparece no HTML -->
+
+  <div v-show="showName">
+    Nome: {{ firstName }} <br>
+    Sobrenome: {{ lastName }}
+  </div>
+
+  <div v-if="accessLevel === 'admin'">Usuário Admin</div>
+  <div v-else-if="accessLevel === 'marketing'">Usuário Marketing</div>
+  <div v-else>Usuário normal</div>
+
   <img alt="Vue logo" src="./assets/logo.png">
   <HelloWorld msg="Welcome to Your Vue.js App"/>
 </template>
@@ -12,7 +23,16 @@ export default {
   name: 'App',
   components: {
     HelloWorld,
-    TheHeader
+    TheHeader,
+  },
+  data() {
+    return {
+      showHeader: true,
+      firstName: 'Glauco',
+      lastName: 'Pereira',
+      showNames: false,
+      accessLevel: 'admin'
+    }
   }
 }
 </script>
