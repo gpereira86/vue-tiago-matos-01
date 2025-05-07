@@ -5,6 +5,18 @@
     <!-- Pode-se suprimir v-bind usando somente ':' -->
 <!--    <img :src="imgSrc" v-bind:alt="imgAlt"> -->
 
+    <h1 :class="{title: true, 'title-home': isHome }">
+      Curso de Vue 3
+    </h1>
+
+    <p :class="['text', {'text-home': isHome }]">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aspernatur dolor dolores eos error et explicabo fugit hic impedit ipsa ipsum labore libero nihil optio pariatur, perspiciatis quia repellat vel?
+    </p>
+
+    <p :style="styleClass">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquam neque, non obcaecati possimus provident voluptas. Beatae cumque eius facilis labore, laudantium magnam, placeat quasi ratione reprehenderit sapiente, soluta voluptatibus.
+    </p>
+
     <div v-for="(obj, index) in todos" v-bind:key="obj.id" class="todos-item">
       <img
           v-if="obj.imgSrc"
@@ -21,6 +33,10 @@ export default {
   name: 'App',
   data() {
     return {
+      isHome: true,
+      classVar: 'title',
+      styleClass: {color: 'aqua', backgroundColor: 'black', 'font-size': '20px'},
+      pClass:['text', 'text-home'],
       todos: [
         {
           "userId": 1,
@@ -61,6 +77,24 @@ export default {
 </script>
 
 <style>
+.title {
+  font-size: 20px;
+  color: blue;
+}
+
+.title-home {
+  font-size: 40px;
+  color: green;
+}
+
+.text {
+  color: yellowgreen;
+}
+
+.text-home {
+  color: blueviolet;
+}
+
 .todos-item{
   background: black;
   color: white;
